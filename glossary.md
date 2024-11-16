@@ -14,7 +14,7 @@ artificial intelligence
 : a technology that has input ouptut behavior that appears as an intelligent agent
 
 generative pretrained transformer
-: Its based on transfer model that takes in tokens (FIXME
+: It is a transfer model that takes in tokens (FIXME
 
 large language model
 : a probability distribution that describes the structure of sequences of tokens and enables next token prediction as well as serves as a mathematical description of tokens using many parameters

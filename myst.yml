@@ -1,0 +1,30 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: c93b0811-890b-4111-a839-b3ea55e17320
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/ml4sts/what-is-ai
+  abbreviations: 
+    AI: Artificial Intelligence
+    ML: Machine Learning
+    CS: Computer Science
+    DS: Data Science
+    md: markdown
+    MyST: Markedly Structured Text
+    LLM: Large Language Model
+    GPT: Generative Pretrained Transformer
+  toc:
+    - file: main
+    - file: glossary
+  exclude:
+    - README
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
+
