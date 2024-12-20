@@ -42,6 +42,6 @@ site:
   options:
     favicon: assets/lab_pencil.ico
     logo: assets/lab_logo.png
-bibliography:
-  - references.bib
+  bibliography:
+    - ml4sts.bib
 
