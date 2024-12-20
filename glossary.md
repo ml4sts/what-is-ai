@@ -21,8 +21,11 @@ artificial neuron
 deep learning
 : a type of machine learning that consists of creating large numbers of hidden layers of {term}`artifical neuron`s
 
+discriminative model
+: a type of statistical model that describes the decision boundary to make a classification
+
 generative model
-: a type of statistical model that describes the way that the underlying data is distributed with sufficient detail to be able to sample new data that is in the same distribution as the original data
+: a type of statistical model that describes the way that the underlying data is distributed with sufficient detail to be able to sample new data that is in the same distribution as the original data; often in 
 
 generative pretrained transformer
 : It is a {term}`transformer` model that takes in tokens and can be sampled from to to produce novel token sequences that are similar to its training data

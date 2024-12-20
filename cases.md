@@ -22,7 +22,7 @@ I will stream line this example somewhat for the different audience; this is cur
 ```
 
 ```{code-cell} ipython3
-:tags: ["hide-cell"]
+:tags: hide-cell
 
 import pandas as pd
 import seaborn as sns
@@ -43,7 +43,7 @@ We're trying to build an automatic flower classifier that, for measurements of a
 
  To start we will look at the data
 ```{code-cell} ipython3
-:tags: ["hide-input"]
+:tags: hide-input
 
 iris_df.head()
 ```
@@ -56,7 +56,7 @@ In class, I printed the column names to copy them into the variables below. This
 :::::
 
 ```{code-cell} ipython3
-:tags: ['hide-cell']
+:tags: hide-cell
 iris_df.columns
 ```
 
@@ -151,7 +151,7 @@ Instantiating the object says we are assuming a particular type of model.  In th
 this is one example of a [Bayes Estimator](https://en.wikipedia.org/wiki/Bayes_estimator)
 
 
-Gaussian Naive Bayes is a very simple model, but it is a {term}`generative` model (in constrast to a {term}`discriminative` model) so we can use it to generate synthetic data that looks like the real data, based on what the model learned. 
+Gaussian Naive Bayes is a very simple model, but it is a {term}`generative model` (in constrast to a {term}`discriminative model`) so we can use it to generate synthetic data that looks like the real data, based on what the model learned. 
 
 
 
@@ -209,7 +209,7 @@ but if we pick one row, it returns a series, which is incompatible with the pred
 
 
 ```{code-cell} ipython3
-:tags: ["raises-exception"]
+:tags: raises-exception
 gnb.predict(X_test.iloc[0])
 ```
 
@@ -225,12 +225,9 @@ which we can get a prediction for:
 gnb.predict(X_test.iloc[0:1])
 ```
 
-We could also transform with `to_frame` and then {term}`transpose` with [`T`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.T.html#pandas.DataFrame.T) or ([`transpose`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.transpose.html))
-```{code-cell} ipython3
-gnb.predict(X_test.iloc[0].to_frame().T)
-```
 
-We can also pass a 2D array (list of lists) with values in it (here I typed in values similar to the mean for setosa above)
+
+We can also pass a 2D array (list of lists) with values in it  that were never in our dataset at all (here I typed in values similar to the mean for setosa above)
 ```{code-cell} ipython3
 gnb.predict([[5.1, 3.6, 1.5, 0.25]])
 ```
@@ -255,18 +252,16 @@ conf_df = pd.DataFrame(data = conf_mat, index=actual_labels, columns=prediction_
 ```
 
 ```{code-cell} ipython3
-:tags: ['hide-cell']
+:tags: hide-cell
 
-from myst_nb import glue
+
 c1 = gnb.classes_[1]
 c2 = gnb.classes_[2]
 conf12 = conf_mat[1][2]
-glue('c1',c1)
-glue('c2',c2)
-glue('f1t2',conf12)
+
 ```
 
-{glue}`f1t2` flowers were mistakenly classified as {glue}`c1` when they were really {glue}`c2`
+{eval}`conf12` flowers were mistakenly classified as {eval}`c1` when they were really {eval}`c2`
 
 This report is also available: 
 ```{code-cell} ipython3
