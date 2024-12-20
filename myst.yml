@@ -11,20 +11,32 @@ project:
     AI: Artificial Intelligence
     ML: Machine Learning
     CS: Computer Science
+    DL: deep learning
     DS: Data Science
     md: markdown
     MyST: Markedly Structured Text
     LLM: Large Language Model
     GPT: Generative Pretrained Transformer
+    RAG: Retrieval Augmented Generation
+    OpenAI: null
   toc:
-    - file: main
+    - file: index
+    - file: is 
+    - file: not
+    - file: risks 
+    - file: cases
+    - file: incidents
     - file: glossary
   exclude:
     - README
+  references:
+    mystmd: https://mystmd.org/
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+    favicon: assets/lab_pencil.ico
+    logo: assets/lab_logo.png
+bibliography:
+  - references.bib
 
