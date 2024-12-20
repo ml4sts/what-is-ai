@@ -141,12 +141,25 @@ Then the goal in creating the learning algorithm is to find the right details, i
 
 Learning algorithms output that and then allow us to have a complete prediction algorithm.  
 
-## There are different types of AI 
+## AI is classified in many ways
 
-### Predictive AI saw success first 
+AI can be classified by how it is developed:
+- FIXME
+- Machine learning
+- hybrid systems that combine multiple types
+
+Most current things are ML, and the underlying assumptions come in different forms.  
+
+Some examples:
+- ChatGPT, Gemini, and Claude are examples of {term}`large language model`s and specifically {term}`GPTs <generative pretrained transformer>` which are a type of {term}`generative model` implemented with {term}`deep learning` 
+- the original HALO player ranking algorithm was also a {term}`generative model` but it was primarily used to make predictions of what would be a good matchup, rather than generating new sequences of win/loss for opponent pairs
 
 
-### Generative AI is currently popular
+
+### Deep Learning
+
+### Discriminative vs Generative
+
 
 These are generally {term}`LLMs <large language model>` so they are a {term}`model` of a natural or spoken language (or many of them, or a mix of natural and programming languages).  
 
