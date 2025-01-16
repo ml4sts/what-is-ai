@@ -1,4 +1,6 @@
 ---
+title: Case Studies
+description: some specific AI systems and examples broken down in the language of the tutorial
 jupytext:
   text_representation:
     extension: .md
@@ -7,10 +9,8 @@ jupytext:
     jupytext_version: 1.16.4
 kernelspec:
   display_name: Python 3 (ipykernel)
-  language: python
   name: python3
 ---
-
 
 # Case Studies
 

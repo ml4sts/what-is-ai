@@ -24,12 +24,18 @@ deep learning
 discriminative model
 : a type of statistical model that describes the decision boundary to make a classification
 
+feature
+: in machine learning, one input to the prediction algorithm, typically of many, stored together in a feature vector
+
 generative model
 : a type of statistical model that describes the way that the underlying data is distributed with sufficient detail to be able to sample new data that is in the same distribution as the original data; often in 
 
 generative pretrained transformer
 : It is a {term}`transformer` model that takes in tokens and can be sampled from to to produce novel token sequences that are similar to its training data
 : a specific type of {term}`generative model`
+
+label
+: the output value for a particular sample or of a prediction algorithm (ie *true label* or *predicted label*)
 
 language
 : a vocabulary and a grammar for how to combine the words in order to convey meaning
@@ -46,6 +52,12 @@ machine learning
 
 model
 : a simplification of some part of the world
+
+neural network
+: a set of {term}`artificial neurons <artificial neuron>` where the outputs of some are the inputs to the others, serving to "connect" them as a set, or network; often described as layers where connections are from one layer to the next. 
+
+neural network architecture
+: the general structure of how a neural network is set up, not the specific weights, but the size of the layers, number of layers, types of layers for example (FIXME)
 
 predictive model
 : a mathemtical model, typically implemented in computer code, that predicts a label for an input or an outcome based on past
@@ -71,8 +83,14 @@ sandbox
 statistical model
 : a type of mathematical model that describes its object of inquiry using probability distributions
 
+target
+: the variable to be predicted in a machine learning problem setup, the dependent variable
+
 token 
 : the basic units used in computational processing of texts from human spoken (not programming) languages
 : a part of a word or a word, approximately like prefix, base, suffix parts, in general 1000 tokens is about 750 words
+
+transformer
+: a type of model, specifically, a type of {term}`neural network architecture`
 
 ```

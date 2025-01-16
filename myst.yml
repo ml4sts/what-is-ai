@@ -2,10 +2,10 @@
 version: 1
 project:
   id: c93b0811-890b-4111-a839-b3ea55e17320
-  # title:
-  # description:
+  title: Defining AI
+  description: a tutorial, glossary and some examples about AI
   # keywords: []
-  # authors: []
+  authors: ["Sarah M Brown"]
   github: https://github.com/ml4sts/what-is-ai
   abbreviations: 
     AI: Artificial Intelligence
@@ -18,17 +18,19 @@ project:
     LLM: Large Language Model
     GPT: Generative Pretrained Transformer
     RAG: Retrieval Augmented Generation
+    US: United States
+    EPA: Environmental Protection Agency
     OpenAI: null
   toc:
-    - file: index
-    - file: is 
-    - file: not
-    - file: risks 
-    - file: cases
-    - file: incidents
-    - file: glossary
+    - file: index.md
+    - file: tutorial.md 
+    - file: not.md
+    - file: risks.md
+    - file: cases.md
+    - file: incidents.md
+    - file: glossary.md
   exclude:
-    - README
+    - README.md
   references:
     mystmd: https://mystmd.org/
   # To autogenerate a Table of Contents, run "myst init --write-toc"
@@ -37,6 +39,4 @@ site:
   options:
     favicon: assets/lab_pencil.ico
     logo: assets/lab_logo.png
-  bibliography:
-    - ml4sts.bib
 
