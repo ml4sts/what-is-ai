@@ -60,6 +60,18 @@ Models can reveal the data they were trained on, which means that any user could
 
 ## Impacts on Human Thinking
 
-- Recently, a team at Univeristy of Toronto released a pre-print demonstrating a decrease in human creativity when asked to perform a task independently after exposure trials using an LLM @kumar2024human. This study measured two types of creativity using standard measures for each.
+- A team at Univeristy of Toronto released a pre-print demonstrating a decrease in human creativity when asked to perform a task independently after exposure trials using an LLM @kumar2024human. This study measured two types of creativity using standard measures for each.
 - A team at Northwestern's Kellog School of Business released a pre-print showing that LLM creativity is similar to human creativity, but when prompted to respond as female, old, or Black, they score considerably worse on creativity @wangpreliminary. This study measured one type of creativity. 
 - A large-scale meta analysis found that AI+ human performance is often worse than the best of  human alone or AI alone. They also found that AI improved a person's performance mostly for *generation* tasks, but not for decision making tasks @vaccaro2024combinations.
+
+
+(errorproof)=
+## Errors[^hallucination] are inevitable
+
+LLMs will make mistakes and give false information at some rate, guaranteed. These errors are because the LLM has no grounding in facts, it is generating text based on a probabilisitic model of language.  With a lot of feedback loops[^reasoning] or careful prompting good answers can be produced at high rates in some domains, but fundamentally they
+
+A team at OpenAI and Georgia Tech showed that the training procedure means that LLMs are going to, with high probability, give a wrong answer over saying "I don't know"@https://doi.org/10.48550/arXiv.2509.04664. 
+
+[^hallucination]: LLM errors are sometimes called hallucinations. I prefer to refer to them as errors. Hallucinations in a human brain occur when the brain stops using sensory information and treats its predictions about the world as if they are true and then without sensory information, the predictions become less and less related to the real environment the person is in. LLM hallucinations are defined by its output being incorrect. 
+
+[^reasoning]: Reasoning models work, in broad terms, by adding extra text to the prompt and taking the output and then re-prompting. For example if your prompt is "what is 3+5" the reasoning model might actually prompt the LLM with something like, "make a plan to respond to: what is 3+5" and then it takes the models plan for answering the question  and prompts the model again to actually get an answer. You can think of it like prompting the model with specific prompts that help first write a better prompt for the thing you actually want and then actually using the better prompt. 

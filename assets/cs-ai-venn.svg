@@ -1,0 +1,19 @@
+<svg version="1.1" viewBox="0 0 500 500" fill="none" stroke="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green circle (converted from ellipse) -->
+  <circle cx="250" cy="250" r="210" fill="#6aa84f"/>
+  
+  
+  <text x="250" y="160" fill="white" text-anchor="middle" 
+  font-family="Arial, sans-serif" font-size="28" font-weight="bold">Computer Science</text>
+  
+  <!-- Dark purple circle -->
+  <circle cx="250" cy="360" r="100" fill="#4c1130"/>
+  
+  <!-- White text "Artificial" -->
+  <text x="250" y="345" fill="white" text-anchor="middle" 
+  font-family="Arial, sans-serif" font-size="20">Artificial</text>
+  
+  <!-- White text "Intelligence" -->
+  <text x="250" y="375" fill="white" text-anchor="middle" 
+  font-family="Arial, sans-serif" font-size="20">Intelligence</text>
+</svg>

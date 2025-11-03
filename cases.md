@@ -14,12 +14,105 @@ kernelspec:
 
 # Case Studies
 
+
+## Linear Regression
+
+<!-- 
+::::{tab-set}
+:::{tab-item} Plain English
+:sync: english 
+
+We can predict what species of iris a flower is from 4 measurements: width and length of the sepal and the petal by comparing each flower we need to evaluate to the average of the others and predicting the one it's most similar to.  
+
+:::
+:::{tab-item} Math
+:sync: math
+
+- $f(x_i) = \arg_j\max\math{P}(\mu_j,\mathbf{\sigma_j}I)$
+- $\mu_j = \frac{1}{N_j}\sum_{i=1}^{N_j} x_i$ for $j$ 
+- $\sigma = $
+
+
+
+:::
+:::{tab-item} Code (Python)
+:sync: python
+
+
+```
+output = my_fun(input, parameters)
+```
+
+where: 
+- `my_fun` is a function template
+- it is possible to define a function like `lambda in: my_fun(input, param0)` to create a more specific function
+- `parameters` can change how `my_fun` works to adapt it to different contexts
+
+:::
+:::{tab-item} Diagram
+:sync: end
+
+(mlassumptiondiagram)=
+```{mermaid}
+flowchart LR
+    x(input <br>x) -->  f[f ] --> y(output <br>y)
+```
+<!--  <sub>#952;</sub -->
+
+
+:::
+
+:::: -->
+
+
 <!-- ## Case: A predictive model for -->
 ## Iris subspecies classification
 
-```{warning}
-I will stream line this example somewhat for the different audience; this is currently straight out of my lecture notes
+::::{tab-set}
+:::{tab-item} Plain English
+:sync: english 
+
+We can predict what species of iris a flower is from 4 measurements: width and length of the sepal and the petal by comparing each flower we need to evaluate to the average of the others and predicting the one it's most similar to.  
+
+:::
+:::{tab-item} Math
+:sync: math
+
+- $f(x_i) = \arg_j\max\math{P}(\mu_j,\mathbf{\sigma_j}I)$
+- $\mu_j = \frac{1}{N_j}\sum_{i=1}^{N_j} x_i$ for $j$ 
+- $\sigma = $
+
+
+
+:::
+:::{tab-item} Code (Python)
+:sync: python
+
+
 ```
+output = my_fun(input, parameters)
+```
+
+where: 
+- `my_fun` is a function template
+- it is possible to define a function like `lambda in: my_fun(input, param0)` to create a more specific function
+- `parameters` can change how `my_fun` works to adapt it to different contexts
+
+:::
+:::{tab-item} Diagram
+:sync: end
+
+(mlassumptiondiagram)=
+```{mermaid}
+flowchart LR
+    x(input <br>x) -->  f[f ] --> y(output <br>y)
+```
+<!--  <sub>#952;</sub -->
+
+
+:::
+
+::::
 
 ```{code-cell} ipython3
 :tags: hide-cell
@@ -69,7 +162,7 @@ target_var = 'species'
 ```
 
 
-## What does Naive Bayes do?
+### What does Naive Bayes do?
 
 
 - Naive = indepdent features
@@ -92,7 +185,7 @@ This means that the assumptions of the Gaussian Naive Bayes model are met well e
 
 
 
-## Separating Training and Test Data
+### Separating Training and Test Data
 
 To do machine learning, we split the data both sample wise (rows if tidy) and variable-wise (columns if tidy). First, we'll designate the columns to use as features and as the target.  
 
@@ -139,7 +232,7 @@ len(X_train)/len(iris_df)
 So by default we get a 75-25 split.
 
 
-## Instantiating our Model Object
+### Instantiating our Model Object
 
 Next we will instantiate the object for our *model*.  In `sklearn` they call these objects [estimator](https://scikit-learn.org/stable/tutorial/statistical_inference/settings.html#estimators-objects). All estimators have a similar usage.  First we instantiate the object and set any *hyperparameters*.
 
@@ -190,7 +283,7 @@ Estimator objects also have a score method.  If the estimator is a classifier, t
 gnb.score(X_test,y_test)
 ```
 
-## Making model predictions
+### Making model predictions
 we can predict for each sample as well: 
 ```{code-cell} ipython3
 y_pred = gnb.predict(X_test)
@@ -234,7 +327,7 @@ gnb.predict([[5.1, 3.6, 1.5, 0.25]])
 
 This way it warns us that the feature names are missing, but it still gives a prediction. 
 
-### Evaluating Performance in more detail
+#### Evaluating Performance in more detail
 
 ```{code-cell} ipython3
 confusion_matrix(y_test,y_pred)
@@ -307,7 +400,7 @@ Then we add a species column, by repeating each species 20 times
 as list of lists.  
 
 
-## How does it make the predictions? 
+#### How does it make the predictions? 
 
 It computes the probability for each class and then predicts the highest one: 
 

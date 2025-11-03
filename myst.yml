@@ -23,20 +23,28 @@ project:
     OpenAI: null
   toc:
     - file: index.md
-    - file: tutorial.md 
-    - file: not.md
-    - file: risks.md
-    - file: cases.md
-    - file: incidents.md
+    - title: What is AI?
+      children:
+        - file: tutorial.md 
+        - file: not.md
+        - file: risks.md
+        - file: cases.md
+    - title: Talks
+      children:
+        - file: talk/human-ai.md
     - file: glossary.md
+    - file: notes.md
   exclude:
     - README.md
+    - '*.py'
   references:
     mystmd: https://mystmd.org/
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:
   template: book-theme
   options:
+    # style: ./style.css
     favicon: assets/lab_pencil.ico
     logo: assets/lab_logo.png
+    folders: true
 

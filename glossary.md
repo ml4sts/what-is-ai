@@ -9,6 +9,10 @@ agent
 algorithm
 : a set of instructions to complete a task; a recipe
 
+anonymous function
+:  a function that's defined on the fly, typically to lighten syntax or return a function within a function. In python, they're defined with the {term}`lambda` keyword.
+:  [docs](https://en.wikipedia.org/wiki/Anonymous_function#:~:text=Anonymous%20functions%20are%20often%20arguments,than%20using%20a%20named%20function)
+
 artificial intelligence
 : the study of intelligent agents that receive precepts from the environment and take action
 : a technology that has input ouptut behavior that appears as an intelligent agent
@@ -18,11 +22,29 @@ artificial neuron
 : a type of function that takes a weighted sum of the inputs and passes them to an activation function
 : a type of mathematical, or computer, function that approximates some functions of biological neurons
 
+binary
+:  a place based number system with base 2
+
+classification
+:  a type of machine learning where a {term}`categorical` {term}`target` variable is predicted from {term}`features <feature>`
+
+class
+:  a value of the {term}`target` variable
+
+cluster
+:  a group of samples that is similar by some definition
+
+clustering
+:  a type of {term}`unsupervised learning` that finds groups or clusters among the samples
+compute
+:  apply a series of mathematical operations to an input 
+
 deep learning
-: a type of machine learning that consists of creating large numbers of hidden layers of {term}`artifical neuron`s
+: a type of machine learning that consists of creating large numbers of hidden layers of {term}`artificial neurons <artificial neuron>`
 
 discriminative model
-: a type of statistical model that describes the decision boundary to make a classification
+: a type of statistical model that describes the decision boundary to make a prediction
+
 
 feature
 : in machine learning, one input to the prediction algorithm, typically of many, stored together in a feature vector
@@ -36,6 +58,10 @@ generative pretrained transformer
 
 label
 : the output value for a particular sample or of a prediction algorithm (ie *true label* or *predicted label*)
+
+lambda
+:  the keyword used to define an anonymous function; lambda functions are defined with a compact syntax `<name> = lambda <parameters>: <body>`
+: [docs](https://docs.python.org/3.9/reference/expressions.html#lambda)
 
 language
 : a vocabulary and a grammar for how to combine the words in order to convey meaning
@@ -53,14 +79,33 @@ machine learning
 model
 : a simplification of some part of the world
 
+model class
+: a generic mathematical {term}`model` that can be fit to a specific part of the world by setting {term}`parameter` values
+
 neural network
 : a set of {term}`artificial neurons <artificial neuron>` where the outputs of some are the inputs to the others, serving to "connect" them as a set, or network; often described as layers where connections are from one layer to the next. 
 
 neural network architecture
-: the general structure of how a neural network is set up, not the specific weights, but the size of the layers, number of layers, types of layers for example (FIXME)
+: the general structure of how a neural network is set up, not the specific weights, but the size of the layers, number of layers, types of layers for example 
+
+number
+:  a mathematical object used to count, measure and label
+
+number system
+:  a cultural artifact that describes the symbols used to represent quantities and how to interpret them as {term}`numbers <number>` 
+
+parameter
+:  (general programming) all inputs to a function
+:  (in ML) the values that transform a generic function into a specific function
+
+place based
+:  a type of {term}`number system` where the position or place of the symbol changes its meaning. So in  1, 10, and 100, the symbol `1` represents different values because of its position.
 
 predictive model
 : a mathemtical model, typically implemented in computer code, that predicts a label for an input or an outcome based on past
+
+probability distribution
+:  a function that takes an event (or value) as input and returns the likelihood of that even occuring
 
 production
 : a state of a system where it is in use by users unaffiliated with the developers and generally unrestricted (except for possibly payment)
@@ -68,6 +113,13 @@ production
 
 programming language
 : a human readable {term}`language` that can be processed by computers and translated (either live through an interpreter or in batch through a compiler) to machine instructions that the physical computer can execute
+
+machine representation
+: a description of an object that can be stored in a computer
+
+
+regression
+: {term}`supervised learning` that predicts a continuous valued output
 
 research
 : a state of a system where is has been built and evaluated, but not deployed to general users, instead is only available to the team that built it and (potentially) other authorized users
@@ -83,8 +135,20 @@ sandbox
 statistical model
 : a type of mathematical model that describes its object of inquiry using probability distributions
 
+supervised learning
+: a type of machine learning that requires both features and target variables at time of training
+:  machine learning with labeled examples
+
 target
 : the variable to be predicted in a machine learning problem setup, the dependent variable
+:  the output of a prediction algorithm
+:  also called the dependent variable or label
+
+test accuracy
+:  percentage of predictions that the model predict correctly, based on held-out (previously unseen) test data
+
+test data
+:  data that was not used in training that is instead used to evaluate the perforance of a model 
 
 token 
 : the basic units used in computational processing of texts from human spoken (not programming) languages
@@ -93,4 +157,8 @@ token
 transformer
 : a type of model, specifically, a type of {term}`neural network architecture`
 
+
+unsupervised learning
+: a type of machine learning that does not use target variables at learning (fit) time. 
+: machine learning from unlabeled examples
 ```
